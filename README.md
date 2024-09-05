@@ -8,7 +8,7 @@ Useless knowledge for people that don't spend that much time in the bathroom
 
 "Collected" documentation for `Elijah` 
 
-## Lazy
+## Initiatives
 
 [G1: Make progress towards results](ginitiatives/G1)
 
@@ -23,6 +23,8 @@ Useless knowledge for people that don't spend that much time in the bathroom
 [G6: Delete architecture with LCM](ginitiatives/G6)
 
 [G7: Clojure](ginitiatives/G7)
+
+## Lazy readmes
 
 [Readme almost](readmes/230923.0554.almost)
 
