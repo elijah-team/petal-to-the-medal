@@ -10,19 +10,19 @@ Useless knowledge for people that don't spend that much time in the bathroom
 
 ## Lazy
 
-[Initiative 1](ginitiatives/G1)
+[G1: Make progress towards results](ginitiatives/G1)
 
-[Initiative 2](ginitiatives/G2)
+[G2: Make it "fun" to look at](ginitiatives/G2)
 
-[Initiative 3](ginitiatives/G3)
+[G3: Procrastinate about clojure](ginitiatives/G3)
 
-[Initiative 4](ginitiatives/G4)
+[G4: Procrastinate about `dlog`](ginitiatives/G4)
 
-[Initiative 5](ginitiatives/G5)
+[G5: Stop concentrating on "architecture"...](ginitiatives/G5)
 
-[Initiative 6](ginitiatives/G6)
+[G6: Delete architecture with LCM](ginitiatives/G6)
 
-[Initiative 7](ginitiatives/G7)
+[G7: Clojure](ginitiatives/G7)
 
 [Readme almost](readmes/230923.0554.almost)
 
