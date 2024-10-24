@@ -1,0 +1,39 @@
+name: mdbook CI
+on:
+  pull_request:
+  merge_group:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - name: stable linux
+            os: ubuntu-latest
+            rust: stable
+            target: x86_64-unknown-linux-gnu
+          - name: stable x86_64-unknown-linux-musl
+            os: ubuntu-20.04
+            rust: stable
+            target: x86_64-unknown-linux-musl
+    name: ${{ matrix.name }}
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install Rust
+      run: bash ci/install-rust.sh ${{ matrix.rust }} ${{ matrix.target }}
+    - name: Build and run tests
+      run: cargo test --locked --target ${{ matrix.target }}
+    - name: Test no default
+      run: cargo test --no-default-features --target ${{ matrix.target }}
+
+  success:
+    name: Success gate
+    if: always()
+    needs:
+      - test
+    runs-on: ubuntu-latest
+    steps:
+      - run: jq --exit-status 'all(.result == "success")' <<< '${{ toJson(needs) }}'
+      - name: Done
+        run: exit 0
