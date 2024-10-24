@@ -22,10 +22,8 @@ jobs:
     - uses: actions/checkout@v4
     - name: Install Rust
       run: bash ci/install-rust.sh ${{ matrix.rust }} ${{ matrix.target }}
-    - name: Build and run tests
-      run: cargo test --locked --target ${{ matrix.target }}
-    - name: Test no default
-      run: cargo test --no-default-features --target ${{ matrix.target }}
+    - name: Build book
+      run: cargo run -- build guide
 
   success:
     name: Success gate
